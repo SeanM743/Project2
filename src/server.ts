@@ -36,8 +36,7 @@ const { check, validationResult } = require('express-validator');
   //! END @TODO1
   
   // Root Endpoint
-  // Displays a simple message to the 
-  
+  // Displays a simple message to the   
 
   app.get( "/filteredimage", async ( req, res ) => {
     var re = req.query.image_url;
@@ -46,9 +45,12 @@ const { check, validationResult } = require('express-validator');
     }
 
     const filteredpath = await filterImageFromURL(re);
-    return res.status(200).sendFile(filteredpath, async () => {
-      await deleteLocalFiles([filteredpath]);
-    });
+    return res.status(200).sendfile(filteredpath);
+    await deleteLocalFiles([filteredpath]);
+    
+    // return res.status(200).sendFile(filteredpath, async () => {
+    //   await deleteLocalFiles([filteredpath]);
+    // });
 
     // var myfun = async function(data, callback) {
     //   try{
