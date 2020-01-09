@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf www/ || true",
-    "build": "npm run clean && tsc && cp .npmrc www/.npmrc && cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm run clean && tsc && cp .npmrc www && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts"
   },
   "repository": {
@@ -30,6 +30,8 @@
   "dependencies": {
     "del": "^5.1.0",
     "express": "^4.17.1",
-    "jimp": "^0.6.8"
+    "express-validator": "^6.3.1",
+    "jimp": "^0.6.8",
+    "tns": "^0.2.0"
   }
 }

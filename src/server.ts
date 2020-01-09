@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 import { using, filter } from 'bluebird';
 import { callbackify } from 'util';
+//import { LocalNotifications } from 'nativescript-local-notifications';
 
 const { check, validationResult } = require('express-validator');
 
@@ -39,7 +40,9 @@ const { check, validationResult } = require('express-validator');
   // Displays a simple message to the   
 
   app.get( "/filteredimage", async ( req, res ) => {
+    //const re:string = req.query.image_url;
     var re = req.query.image_url;
+    
     if (!re){
       return res.status(400).send(`Image URL is required`);
     }
@@ -47,7 +50,9 @@ const { check, validationResult } = require('express-validator');
     const filteredpath = await filterImageFromURL(re);
     return res.status(200).sendfile(filteredpath);
     await deleteLocalFiles([filteredpath]);
-    
+
+    //comment test test test
+
     // return res.status(200).sendFile(filteredpath, async () => {
     //   await deleteLocalFiles([filteredpath]);
     // });
