@@ -1,3 +1,14 @@
+#Student Comments, 1/11/2020
+-I don't know where you are getting the requirement to create a separate branch to work on. I have reviewed the project instructions in this readme and on the web page and there is no requirement listed. I understand it may be a good idea, and I appreciate the comment, but shouldn't be forcing me to resubmit for things that were not required.
+
+Endpoint: http://udagram-mahoney-dev.us-west-2.elasticbeanstalk.com/filteredimage?image_url=https://cdn.fileinfo.com/img/ss/lg/jpeg_43.jpg
+
+Another requirement you graded to was to put my github in the readme. Here it is:
+
+https://github.com/SeanM743/Project2
+
+This is yet another requirement that was not listed in the project instructions. And Udacity actually links to my git repo, and I selected the checkbox that contained my repo. 
+
 # Udagram Image Filtering Microservice
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
